@@ -1,10 +1,67 @@
-import { NG2_CONDITIONS_PIPES } from './boolean/conditions.pipe';
-import { NG2_TYPES_PIPES } from './boolean/types.pipe';
+import { NgModule } from '@angular/core';
+
+import { 
+    IsGreaterPipe,
+    IsGreaterOrEqualPipe,
+    IsLessPipe,
+    IsLessOrEqualPipe,
+    IsEqualPipe,
+    IsNotEqualPipe,
+    IsIdenticalPipe,
+    IsNotIdenticalPipe,
+} from './boolean/conditions.pipe';
+
+import {
+    IsNullPipe,
+    IsUndefinedPipe,
+    IsFunctionPipe,
+    IsNumberPipe,
+    IsStringPipe,
+    IsArrayPipe,
+    IsObjectPipe,
+    IsDefinedPipe
+} from './boolean/types.pipe';
+
+@NgModule({
+    declarations: [
+        IsGreaterPipe,
+        IsGreaterOrEqualPipe,
+        IsLessPipe,
+        IsLessOrEqualPipe,
+        IsEqualPipe,
+        IsNotEqualPipe,
+        IsIdenticalPipe,
+        IsNotIdenticalPipe,
+        IsNullPipe,
+        IsUndefinedPipe,
+        IsFunctionPipe,
+        IsNumberPipe,
+        IsStringPipe,
+        IsArrayPipe,
+        IsObjectPipe,
+        IsDefinedPipe 
+    ],
+    exports: [
+        IsGreaterPipe,
+        IsGreaterOrEqualPipe,
+        IsLessPipe,
+        IsLessOrEqualPipe,
+        IsEqualPipe,
+        IsNotEqualPipe,
+        IsIdenticalPipe,
+        IsNotIdenticalPipe,
+        IsNullPipe,
+        IsUndefinedPipe,
+        IsFunctionPipe,
+        IsNumberPipe,
+        IsStringPipe,
+        IsArrayPipe,
+        IsObjectPipe,
+        IsDefinedPipe
+    ]
+})
+export class Ng2BooleanPipesModule {}
 
 export * from './boolean/conditions.pipe';
 export * from './boolean/types.pipe';
 
-export const NG2_BOOLEAN_PIPES = [
-    ...NG2_CONDITIONS_PIPES,
-    ...NG2_TYPES_PIPES
-];

@@ -1,3 +1,5 @@
+import { NgModule } from '@angular/core';
+
 import { LeftPadPipe } from './string/left-pad.pipe';
 import { MatchPipe } from './string/match.pipe';
 import { PadPipe } from './string/pad.pipe';
@@ -32,23 +34,42 @@ export * from './string/encode-uri-component.pipe';
 export * from './string/truncate.pipe';
 export * from './string/repeat.pipe';
 
-
-
-export const NG2_STRING_PIPES = [
-    LeftPadPipe,
-    MatchPipe,
-    PadPipe,
-    ReplacePipe,
-    RightPadPipe,
-    SplitPipe,
-    TestPipe,
-    TrimPipe,
-    NewlinesPipe,
-    CapitalizePipe,
-    UpperFirstPipe,
-    TemplatePipe,
-    EncodeURIPipe,
-    EncodeURIComponentPipe,
-    TruncatePipe,
-    RepeatPipe
-];
+@NgModule({
+    declarations: [
+        LeftPadPipe,
+        MatchPipe,
+        PadPipe,
+        ReplacePipe,
+        RightPadPipe,
+        SplitPipe,
+        TestPipe,
+        TrimPipe,
+        NewlinesPipe,
+        CapitalizePipe,
+        UpperFirstPipe,
+        TemplatePipe,
+        EncodeURIPipe,
+        EncodeURIComponentPipe,
+        TruncatePipe,
+        RepeatPipe
+    ],
+    exports: [
+        LeftPadPipe,
+        MatchPipe,
+        PadPipe,
+        ReplacePipe,
+        RightPadPipe,
+        SplitPipe,
+        TestPipe,
+        TrimPipe,
+        NewlinesPipe,
+        CapitalizePipe,
+        UpperFirstPipe,
+        TemplatePipe,
+        EncodeURIPipe,
+        EncodeURIComponentPipe,
+        TruncatePipe,
+        RepeatPipe
+    ]
+})
+export class Ng2StringPipesModule {}

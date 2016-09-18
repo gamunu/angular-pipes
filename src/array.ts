@@ -1,3 +1,5 @@
+import { NgModule } from '@angular/core';
+
 import { EmptyPipe } from './array/empty.pipe';
 import { HeadPipe } from './array/head.pipe';
 import { InitialPipe } from './array/initial.pipe';
@@ -44,28 +46,54 @@ export * from './array/drop.pipe';
 export * from './array/deep.pipe';
 export * from './array/chunk.pipe';
 
-
-export const NG2_ARRAY_PIPES = [
-    EmptyPipe,
-    HeadPipe,
-    InitialPipe,
-    LastPipe,
-    JoinPipe,
-    TailPipe,
-    UniqPipe,
-    WithoutPipe,
-    MapPipe,
-    WherePipe,
-    RangePipe,
-    PluckPipe,
-    ReversePipe,
-    OrderByPipe,
-    CountPipe,
-    SomePipe,
-    EveryPipe,
-    ShufflePipe,
-    TakePipe,
-    DropPipe,
-    DeepPipe,
-    ChunkPipe
-];
+@NgModule({
+    declarations: [
+        EmptyPipe,
+        HeadPipe,
+        InitialPipe,
+        LastPipe,
+        JoinPipe,
+        TailPipe,
+        UniqPipe,
+        WithoutPipe,
+        MapPipe,
+        WherePipe,
+        RangePipe,
+        PluckPipe,
+        ReversePipe,
+        OrderByPipe,
+        CountPipe,
+        SomePipe,
+        EveryPipe,
+        ShufflePipe,
+        TakePipe,
+        DropPipe,
+        DeepPipe,
+        ChunkPipe
+    ],
+    exports: [
+        EmptyPipe,
+        HeadPipe,
+        InitialPipe,
+        LastPipe,
+        JoinPipe,
+        TailPipe,
+        UniqPipe,
+        WithoutPipe,
+        MapPipe,
+        WherePipe,
+        RangePipe,
+        PluckPipe,
+        ReversePipe,
+        OrderByPipe,
+        CountPipe,
+        SomePipe,
+        EveryPipe,
+        ShufflePipe,
+        TakePipe,
+        DropPipe,
+        DeepPipe,
+        ChunkPipe
+    ]
+})
+export class Ng2ArrayPipesModule {}
