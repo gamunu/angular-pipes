@@ -1,10 +1,40 @@
+# 5.0.0
+
+## AoT
+
+* The project is now compiled with `ngc` and should work with `AoT`. Create an issue if you're still having trouble.
+
+## Fixes 
+
+* Fix CountPipe
+* Fix EveryPipe test
+* Add IsNilPipe to boolean module
+
+## BREAKING CHANGES
+
+* Rename modules (Remove the `2` from `Ng2...`)
+  + Angular "2" will now be angular 3 soon with semver, keeping the `2` does not make sense anymore
+* Change directory structure
+  + The dist folder has been removed. The compiled files are located next to their source.
+  + Aggregate pipes are now in their own folder instead of being in the math folder (import change, see docs).
+
+
+## Tests
+
+* Removed JSPM to keep things simple. It should be easier to contribute.
+    + It now use Karma with a simple webpack preprocessor.
+
+# 4.0.0
+
+Support for Angular Final
+
 # 3.0.0
 
 * Update Angular to RC.6
 * Remove deprecated tokens.
     + `NG2_PIPES`, `NG2_BOOLEAN_PIPES`, etc.
 
-# 2.2.0 
+# 2.2.0
 
 * Update Angular to RC.5
 * Add support for `NgModule`
@@ -30,11 +60,11 @@
 
 * Updated to angular 2 RC.
 * Moved categories files to src folder, this means:
-    + To import a category you now have to do: `import { NG2_STRING_PIPES } from 'angular-pipes/pipes/src/string'` instead of 
+    + To import a category you now have to do: `import { NG2_STRING_PIPES } from 'angular-pipes/pipes/src/string'` instead of
      `import { NG2_STRING_PIPES } from 'angular-pipes/pipes/string'`
-* All the pipes are now **PURE**. This means you have to use `immutability` to update the pipe value. This is a design choice that may be discussed in the future. 
+* All the pipes are now **PURE**. This means you have to use `immutability` to update the pipe value. This is a design choice that may be discussed in the future.
 
-# 1.6.0 
+# 1.6.0
 
 ## New pipes
 
@@ -84,7 +114,7 @@ If you need to use deep equal, you can use it like this:
 * `shuffle`
 * `random`
 
-# 1.3.0 
+# 1.3.0
 
 ## New pipes
 
@@ -135,7 +165,7 @@ Fix immutability for pipes that were updating the original input.
 
 None.
 
-## Other 
+## Other
 
 * Added documentation
 * Added tests for
